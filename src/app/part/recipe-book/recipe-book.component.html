@@ -1,0 +1,73 @@
+<div class="body">
+  <div class="book">
+  <div class="recipe-book row">
+
+  <div *ngFor="let recept of receptek | paginate: { itemsPerPage: itemsPerPage, currentPage: currentPage, totalItems: receptek.length }">
+    
+    
+    <div class="row align-items-center" id="part1" >
+      <div class="col-6 h-100" id="part1_1">
+        <h2 class="text-center ">{{ recept.nev }}</h2>
+        <div class="row" style="width: 100%;">
+          <div class="col-4 text-center">
+            
+            <p> <i class="bi bi-hourglass-split"></i>{{recept.elkeszitesiIdo}} <span>perc</span></p>
+            
+          </div>
+          <div class="col-4 text-center">
+            
+            <p><i class="bi bi-person-fill"></i>{{recept.adag}} <span>fő</span></p>
+          </div>
+          <div class="col-4 text-center">
+            <p>{{ generateStars(recept.nehezseg) }}</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-6">
+      <img [src]="recept.kep_url" class="rounded float-end img-fluid" id="img" alt="{{recept.nev}}" >
+      </div>
+    </div>
+
+
+
+    <div class="row">
+      <div class="col-8" id="elkeszites">
+        <p id="leiras">{{recept.leiras}}</p>
+      </div>
+      <div class="col-4 d-flex align-items-center " id="hozzavalok">
+        <h6>Hozzávalók</h6>
+        <ul class="list-unstyled">
+          <li class="list" *ngFor="let hozzavalo of recept.hozzavalo">
+            {{ hozzavalo.nev }} - {{ hozzavalo.mennyiseg }}
+          </li>
+        </ul>
+      </div> 
+    </div>
+  
+  
+  
+  </div> 
+
+
+</div>
+
+
+<div class="pagination-wrapper">
+  <pagination-controls 
+    [(page)]="currentPage" 
+    [itemsPerPage]="itemsPerPage" 
+    [maxSize]="2" 
+    [directionLinks]="true" 
+    [autoHide]="true"
+    previousLabel="Előző"
+    nextLabel="Következő">
+  </pagination-controls>
+</div>
+
+</div>
+
+</div>
+  
+  
+
+

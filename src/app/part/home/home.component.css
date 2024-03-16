@@ -1,0 +1,190 @@
+
+body, html {
+    margin: 0;
+    padding: 0;
+    
+  }
+
+  p{
+    color: black;
+    font-weight: bolder;
+    font-size:larger;
+  }
+  
+  .full-width-container {
+    width: 100%;
+    
+    
+    margin: 0; 
+    
+  }
+
+  
+
+.part-light {
+    
+    background: url(https://img.freepik.com/free-photo/top-view-delicious-cheese-with-glass-milk_23-2148430130.jpg?t=st=1710535213~exp=1710538813~hmac=d17828b35eb69eddec4f9853595faa2134b4d9b0390593cc40355af7945e924d&w=996);
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 80px 100px; 
+    width: 100%;
+}
+
+
+.part-light .col-lg-6 {
+    padding-right: 20px; 
+    padding-left: 20px; 
+}
+
+.part-dark {
+    background: url(https://img.freepik.com/free-photo/olives-with-emmental-blue-cheese-chunk-with-knife-spatula-white-desk_23-2148166499.jpg?t=st=1710531925~exp=1710535525~hmac=22beca9794fd554663ac17920ad0f840d25407a693c67723c66a8acd368099e1&w=996);
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 80px 100px; 
+    width: 100%;
+}
+
+
+.part-dark .col-lg-6 {
+    padding-right: 20px; 
+    padding-left: 20px; 
+}
+
+
+
+
+
+
+
+@media (max-width: 992px) { 
+    p{
+        font-size: medium;
+    }
+    .part-light{
+        padding: 40px;
+    }
+    .part-light .row {
+        flex-direction: column; 
+    }
+    .part-light .col-6 {
+        width: 100%; 
+        padding: 0; 
+        margin-bottom: 20px; 
+    }
+    .part-light img.img-fluid {
+        width: 100%; 
+        height: auto; 
+        margin-bottom: 20px; 
+    }
+    .part-light .text-justify {
+        font-size: 16px; 
+        margin-top: 0; 
+    }
+    .part-dark{
+        padding: 40px;
+    }
+    .part-dark .row {
+        flex-direction: column; 
+    }
+    .part-dark .col-6 {
+        width: 100%; 
+        padding: 0; 
+        margin-bottom: 20px; 
+    }
+    .part-dark img.img-fluid {
+        width: 100%; 
+        height: auto; 
+        margin-bottom: 20px; 
+    }
+    .part-dark .text-justify {
+        font-size: 16px; 
+        margin-top: 0; 
+    }
+}
+
+@media (max-width: 768px) { 
+    .part-light{
+        padding: 40px;
+    }
+    .part-light .row {
+        flex-direction: column; 
+    }
+    .part-light .col-6 {
+        width: 100%; 
+        padding: 0; 
+        margin-bottom: 20px; 
+    }
+    .part-light img.img-fluid {
+        width: 100%; 
+        height: auto; 
+        margin-bottom: 20px; 
+    }
+    .part-light .text-justify {
+        font-size: 16px; 
+        margin-top: 0;
+    }
+    .part-dark{
+        padding: 40px;
+    }
+    .part-dark .row {
+        flex-direction: column; 
+    }
+    .part-dark .col-6 {
+        width: 100%; 
+        padding: 0; 
+        margin-bottom: 20px; 
+    }
+    .part-dark img.img-fluid {
+        width: 100%; 
+        height: auto; 
+        margin-bottom: 20px; 
+    }
+    .part-dark .text-justify {
+        font-size: 16px; 
+        margin-top: 0;
+    }
+}
+
+@media (max-width: 576px) {
+    .part-light{
+        padding: 20px;
+    }
+    .part-light .row {
+        flex-direction: column; 
+    }
+    .part-light .col-6 {
+        width: 100%; 
+        padding: 0; 
+        margin-bottom: 20px; 
+    }
+    .part-light img.img-fluid {
+        width: 100%; 
+        height: auto; 
+        margin-bottom: 20px; 
+    }
+    .part-light .text-justify {
+        font-size: 16px; 
+        margin-top: 0; 
+    }
+    .part-dark{
+        padding: 20px;
+    }
+    .part-dark .row {
+        flex-direction: column; 
+    }
+    .part-dark .col-6 {
+        width: 100%; 
+        padding: 0; 
+        margin-bottom: 20px; 
+    }
+    .part-dark img.img-fluid {
+        width: 100%; 
+        height: auto; 
+        margin-bottom: 20px; 
+    }
+    .part-dark .text-justify {
+        font-size: 16px; 
+        margin-top: 0; 
+    }
+}
+

@@ -1,0 +1,43 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container-fluid ">
+    <div class="d-flex justify-content-between align-items-center w-100">
+      <a class="navbar-brand">GasztroGyűjtemény</a>
+      <button (click)="coll = !coll" class="navbar-toggler " type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    </div>
+    <div [ngbCollapse]="coll" class="collapse navbar-collapse" id="navbarNav">
+     
+      
+      <ul class="navbar-nav"> 
+        <li class="nav-item">
+          <a class="nav-link active" routerLink="/home">Kezdőlap</a>
+        </li>
+        <li *ngIf="!user" class="nav-item">
+          <a class="nav-link active" routerLink="/signup">Regisztráció</a>
+        </li>
+        <li *ngIf="!user" class="nav-item">
+          <a class="nav-link active" routerLink="/signin">Bejelentkezés</a>
+        </li>
+        
+        <li *ngIf="user" class="nav-item">
+          <a class="nav-link active" routerLink="/uploadrecipes">Receptek hozzáadása</a>
+        </li>
+
+        <li *ngIf="user" class="nav-item">
+          <a class="nav-link active" routerLink="/recipesadmin">Receptek szerkesztése</a>
+        </li>
+
+        <li *ngIf="user" class="nav-item">
+          <a class="nav-link active" routerLink="/recipebook">Receptkönyv</a>
+        </li>
+
+        <li *ngIf="user" class="nav-item" style="cursor: pointer;">
+          <a (click)="signOut()" class="nav-link active" >Kijelentkezés</a>
+        </li>
+      </ul>
+    
+    </div>
+  </div>
+  
+</nav>

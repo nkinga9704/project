@@ -1,0 +1,38 @@
+<div id="body">
+  <div id="partSignin">
+
+    <div>
+      <h3>Bejelentkezés</h3>
+    </div>
+
+    <div class="form-floating mb-3">
+      <input [(ngModel)]="email" type="email" class="form-control" id="floatingInput" >
+      <label for="floatingInput">E-mail cím</label>
+    </div>
+
+  <div class="form-floating mb-3">
+    <input [(ngModel)]="password" type="password" class="form-control" id="floatingPassword" >
+    <label for="floatingPassword">Jelszó</label>
+  </div>
+
+  <div class="partBtn">
+
+    <button [disabled]="validUser()" (click)="signIn()" type="button" class="btn btn-primary mb-3">Bejelentkezés</button>
+
+
+    <div class="mb-3">
+        <button (click)="googleAuth()" type="button" class="btn btn-primary"><i class="bi bi-google"></i> Bejelentkezés Google fiókkal</button>
+    </div>
+
+    <div class="mb-3">
+        <button routerLink="/forgotpassword" type="button" class="btn btn-primary">Elfelejtette a jelszavát?</button>
+    </div>
+
+    <div class="mb-3 partBtn">
+        <div id="span"> Nincs még regisztrálva?</div>
+        <button routerLink="/signup" type="button" class="btn btn-primary">Regisztráció</button>
+    </div>
+  </div>
+
+  </div>
+</div>

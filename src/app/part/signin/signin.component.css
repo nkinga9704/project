@@ -1,0 +1,123 @@
+#body{
+    background: url(https://img.freepik.com/free-photo/flat-lay-potatoes-pan-with-spices-copy-space_23-2148599898.jpg?t=st=1710536829~exp=1710540429~hmac=f5a30e692c093b17efaec74a23eaddafd03d90c68b1b16c2dc5a036aa96e4499&w=1380);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+h3{
+    text-align: center;
+    padding-bottom: 15px;
+    color: white;
+}
+
+#partSignin{
+    margin: 80px;
+    padding: 30px 60px;
+    width: 600px;
+}
+
+.partBtn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction:column;
+    
+}
+
+.btn{
+    background-color: black;
+    border: black;
+    font-size: larger;
+    padding: 15px 30px;
+    width: 300px;
+}
+
+#span{
+    color: white;
+    font-size: larger;
+}
+
+@media (max-width: 992px) { 
+    #partSignin{
+        margin: 20px;
+        padding: 0;
+        width: 300px;
+    }
+    input{
+        width: 300px;
+        align-items: center;
+        justify-content: center;
+    }
+    .btn{
+        background-color: black;
+        border: black;
+        font-size: smaller;
+        padding: 15px 30px;
+        width: 300px;
+    }
+    #span{
+        background-color: black;
+        font-size: medium;
+        width: 300px;
+        text-align: center;
+        border-radius: var(--bs-border-radius);
+    }
+}
+
+@media (max-width: 768px) { 
+    #partSignin{
+        margin: 20px;
+        padding: 0;
+        width: 300px;
+    }
+    input{
+        width: 300px;
+        align-items: center;
+        justify-content: center;
+    }
+    .btn{
+        background-color: black;
+        border: black;
+        font-size: smaller;
+        padding: 15px 30px;
+        width: 300px;
+    }
+    #span{
+        background-color: black;
+        font-size: medium;
+        width: 300px;
+        text-align: center;
+        border-radius: var(--bs-border-radius);
+    }
+}
+
+@media (max-width: 576px) {
+    #partSignin{
+        margin: 20px;
+        padding: 0;
+        width: 300px;
+    }
+    input{
+        width: 300px;
+        align-items: center;
+        justify-content: center;
+    }
+    .btn{
+        background-color: black;
+        border: black;
+        font-size: smaller;
+        padding: 15px 30px;
+        width: 300px;
+    }
+    #span{
+        background-color: black;
+        font-size: medium;
+        width: 300px;
+        text-align: center;
+        border-radius: var(--bs-border-radius);
+    }
+}

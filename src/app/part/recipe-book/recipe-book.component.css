@@ -1,0 +1,180 @@
+.body{
+  background: url(https://img.freepik.com/free-photo/top-view-fresh-red-tomatoes-white-surface_179666-35254.jpg?t=st=1710612005~exp=1710615605~hmac=aba5b8c3cf7be555a184bc282e225597632142d6ac78d73ac8349f384faa8edc&w=996);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.book {
+  width: 900px;
+  margin: 0 auto; 
+}
+
+.recipe {
+  margin-bottom: 40px; 
+}
+
+.recipe-img {
+  width: 100%; 
+  
+  
+  object-fit: cover; 
+}
+
+#elkeszites, #hozzavalok {
+  height: auto;
+  overflow-y: auto; 
+}
+
+.pagination-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 0; 
+}
+
+.pagination-controls {
+  list-style: none;
+  padding: 0;
+  display: inline-flex;
+}
+
+.pagination-controls li {
+  margin: 0 5px; 
+}
+
+.pagination-controls li a {
+  text-decoration: none;
+  padding: 5px 10px;
+  background-color: #f0f0f0; /* Háttérszín */
+  color: #333; /* Szöveg színe */
+  border-radius: 5px;
+}
+
+.pagination-controls li a:hover {
+  background-color: #ccc; /* Háttérszín hover esetén */
+}
+
+#part1{
+  margin-top: 40px;
+  height: 300px;
+  margin-bottom: 40px;
+  
+  
+}
+
+#part1_1{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 40px;
+ 
+}
+
+#img{
+  height: 300px;
+  width: auto;
+}
+
+.col-6{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+#leiras{
+  font-weight: bolder;
+}
+
+#hozzavalok{
+ 
+  font-weight: bolder;
+  flex-direction: column;
+  padding: 20px;
+  
+}
+
+#hozzavalok li {
+  list-style-type: none; /* A lista jelöléseinek eltávolítása */
+}
+
+.list{
+  padding: 5px;
+}
+
+@media screen and (max-width: 768px) {
+  .book {
+    width: 100%;
+    padding: 0 20px; /* Opcionális: eltolás a szélektől */
+  }
+
+  .recipe {
+    padding: 0 20px; /* Opcionális: eltolás a szélektől */
+  }
+
+  #part1_1 {
+    padding: 20px; /* Opcionális: eltolás a szélektől */
+  }
+  
+  #hozzavalok {
+    text-align: center; /* Középre igazítás */
+  }
+
+  #hozzavalok li {
+    text-align: left; /* Balra igazítás */
+  }
+}
+
+@media (max-width: 576px) {
+  .book {
+    width: 100%;
+    padding: 0 10px; /* Kismértékű térköz a mobilnézethez */
+  }
+  
+  .recipe {
+    margin-bottom: 20px; /* Kisebb távolság a receptek között mobil nézetben */
+  }
+  
+  #part1 {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    height: auto; /* Dinamikus magasság a mobil nézethez */
+  }
+  
+  #part1_1 {
+    padding: 20px;
+  }
+  
+  #img {
+    height: auto;
+    width: 100%;
+  }
+  
+  .col-6 {
+    display: block; /* Kép és tartalom oszlopok egy alá helyezése mobil nézetben */
+  }
+  
+  #elkeszites, #hozzavalok {
+    padding: 10px;
+  }
+  
+  #hozzavalok {
+    text-align: center; /* Középre igazítás mobil nézetben */
+  }
+  
+  #hozzavalok h6 {
+    margin-bottom: 10px; /* Távolság a hozzávalók címe és a lista között */
+  }
+  
+  #hozzavalok ul {
+    padding-left: 0;
+  }
+  
+  .pagination-wrapper {
+    margin-top: 20px; /* Távolság a lapozó és a tartalom között */
+  }
+  
+  .pagination-controls li a {
+    font-size: 14px; /* Lapozó betűmérete mobil nézetben */
+  }
+}

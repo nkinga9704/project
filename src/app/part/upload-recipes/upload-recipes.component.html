@@ -1,0 +1,70 @@
+<div class="body">
+  
+  <div class="card" >
+    <img [src]="newRecipes.kep_url" class="card-img-top" alt="{{newRecipes.nev}}">
+    <div class="card-body">
+      <h3 class="card-title mb-2 text-center">Új recept hozzáadása</h3>
+  
+      <label for="floatingInputValue">{{columns[5]}}</label>
+      <input [(ngModel)]="newRecipes.nev" class="card-title mb-3 form-control" type="text" id="megnevezes">
+
+
+      <label for="floatingInputValue">{{columns[6]}}</label>
+      <select [(ngModel)]="selectedCategory" class="form-select mb-3" aria-label="Default select example">
+        <option value="" disabled selected>Válassz kategóriát!</option>
+        <option *ngFor="let kategoria of kategoriak" [value]="kategoria">{{kategoria}}</option>
+      </select>
+
+      <label for="floatingInputValue">{{columns[9]}}</label>
+      <select [(ngModel)]="selectHard" class="form-select mb-3" aria-label="Default select example">
+        <option value="" disabled selected>Válassz nehézségi szintet!</option>
+        <option *ngFor="let nehezseg of nehezseg" [value]="nehezseg">{{nehezseg}}</option>
+      </select>
+
+
+      
+      <label for="floatingInputValue">{{columns[7]}}</label>
+      <div class="input-group">
+        <input [(ngModel)]="newRecipes.elkeszitesiIdo" type="number" class="card-title mb-3 form-control" type="number"  id="elkeszitesiIdo">
+        <span class="input-group-text mb-3" id="basic-addon2">perc</span>
+      </div>
+      
+
+      <label for="floatingInputValue">{{columns[8]}}</label>
+      <input [(ngModel)]="newRecipes.adag" class="card-title mb-3 form-control" type="number"  id="adag">
+   
+  
+      <table class="ingredients card-text mb-3" >
+        <label for="floatingInputValue">{{ columns[0] }}</label>
+        <tr *ngFor="let hozzavalo of newRecipes.hozzavalo; let i = index;">
+          <td>
+            <input [(ngModel)]="hozzavalo.nev" class="form-control" placeholder="{{ columns[1] }}">
+          </td>
+          <td>
+            <input [(ngModel)]="hozzavalo.mennyiseg" placeholder="Mennyiség" class="form-control">
+          </td>
+          <td>
+            <button  *ngIf="i === newRecipes.hozzavalo.length - 1" (click)="newIngredient()" type="button" class="newBtn btn btn-warning">Új</button>
+          </td>
+        </tr>
+      </table>
+
+      
+
+      
+    
+  
+
+  
+        <label for="floatingInputValue">{{columns[3]}}</label>
+        <input [(ngModel)]="newRecipes.kep_url" class="card-text form-control mb-3" type="text"  id="kep_url">
+  
+        <label for="floatingInputValue">{{columns[4]}}</label>
+        <textarea [(ngModel)]="newRecipes.leiras" class="form-control mb-3" id="exampleFormControlTextarea1" rows="3"></textarea>
+        <div id="addBtn">
+        <button  (click)="newRecept()" type="button" class="btn btn-warning">Hozzáadás</button>
+        </div>
+    </div>
+  </div>
+
+</div>

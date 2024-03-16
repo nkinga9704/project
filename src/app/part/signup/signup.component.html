@@ -1,0 +1,33 @@
+<div id="body">
+  <div id="partSignup">
+
+    <div>
+      <h3>Regisztráció</h3>
+    </div>
+    
+    <div class="form-floating mb-3" >
+      <input [(ngModel)]="email" type="email" class="form-control" id="floatingInput" >
+      <label for="floatingInput">E-mail cím</label>
+    </div>
+
+    <div class="form-floating mb-3">
+      <input [(ngModel)]="password" type="password" class="form-control" id="floatingPassword" >
+      <label for="floatingPassword">Jelszó</label>
+    </div>
+
+    <div class="form-floating mb-3">
+      <input [(ngModel)]="password2" type="password" class="form-control" id="floatingPassword2">
+      <label for="floatingPassword">Jelszó újra</label>
+    </div>
+
+    <div id="partBtn">
+      <button [disabled]="validUser()" (click)="signUp()" type="button" class="btn btn-primary mb-3">Regisztráció</button>
+    
+      <button (click)="googleAuth()" type="button" class="btn btn-primary"><i class="bi bi-google"></i>Folytatás Google fiókkal</button>
+    </div>
+    
+  </div>
+
+ 
+</div>
+

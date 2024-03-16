@@ -1,0 +1,64 @@
+.body{
+    background: url(https://img.freepik.com/free-photo/elevated-view-ingredients-dryfruits-vegetables-black-background_23-2148026898.jpg?t=st=1710588062~exp=1710591662~hmac=18bdef8e4a5dcdfe969988d785e7ccc1934c0f9e92ad47f19bebb6a4d4d86bcf&w=996);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card{
+    width: 640px;
+    margin: 60px;
+    padding: 30px;
+    background: rgb(255, 255, 255, 0.85);
+    
+}
+
+label{
+    color: black;
+    font-weight: bolder;
+}
+
+.ingredients{
+    width: 100%;
+}
+
+.btn{
+    --bs-btn-padding-x: 1.5rem;
+    
+}
+button{
+    background-color: #FFB918;
+    border: #FFB918;
+    
+}
+
+#addBtn{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#addBtn .btn{
+    width: 150px;
+    
+}
+
+@media (max-width: 576px) {
+    .card {
+      margin: 20px;
+      padding: 0;
+      width: 300px;
+    }
+  
+    .ingredients .form-control{
+        width: 100%;
+    }
+    .ingredients .form-control::placeholder{
+        font-size: x-small;
+    }
+    
+   
+  }

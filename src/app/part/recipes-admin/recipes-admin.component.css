@@ -1,0 +1,188 @@
+.body {
+    background: url(https://img.freepik.com/free-photo/rustic-black-wooden-background-with-copy-space_24972-1746.jpg?t=st=1710595607~exp=1710599207~hmac=2b3448c9fdec74fde0b3bb33da460effde4cc449445b5c942639725a9c817aa5&w=996);  
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+  }
+
+
+.row {
+    margin: 30px 50px; 
+    
+  }
+
+  .recipe-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;  
+  }
+  
+  .recipe-img .col-md-4 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .recipe-img .col-md-4 img {
+    max-width: 100%; 
+    height: auto; 
+  }
+
+  .recipes {
+    max-width: 80%; 
+    margin: 0 auto; 
+    background: url(https://img.freepik.com/free-photo/brown-painted-wood-textured-background_53876-102648.jpg?t=st=1710599867~exp=1710603467~hmac=19b186cb03e0e860b4a42f56dcf9d914e457adf81ddb3ef7214b583756a6958a&w=996);
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+  }
+
+  label{
+    color: black;
+    font-weight: bolder;
+    font-size: medium;
+  }
+ 
+td{
+    padding: 3px;
+}
+ 
+.deleteBtn{
+    width: 100%;
+    background: url(https://img.freepik.com/free-photo/dark-wooden-texture-surface_24836-84.jpg?t=st=1710602370~exp=1710605970~hmac=cafd08cbafc20452c050bd066eba488cb085e243532f19212373cea3e542f575&w=996);
+    font-weight: bolder;
+    color: white;
+    border: none;
+}
+
+.addBtn{
+    background: url(https://img.freepik.com/free-photo/natural-wooden-background_24837-269.jpg?t=st=1710602552~exp=1710606152~hmac=524d8555c2ea77226209078cde52deebdeac9ada22f7bacba5c783edbfc157ac&w=996);
+    font-weight:600;
+    border: none;
+    
+}
+
+.buttons{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+.chBtn{
+    width: 200px;
+    background: url(https://img.freepik.com/free-photo/close-up-old-wood-planks_158595-5669.jpg?t=st=1710603830~exp=1710607430~hmac=e462ddbf19c272bd6e7965d3abe992fc734ccb7521563824d03d164d8311e155&w=996);
+    color: white;
+    font-weight: bolder;
+    border: none;
+}
+.delBtn{
+    background: url(https://img.freepik.com/free-photo/grunge-background-wallpaper-texture-concrete-concept_53876-23142.jpg?t=st=1710603334~exp=1710606934~hmac=ef8a4c18c427f320b529fc3e3c6f8ad53f4da56ece92cdf4f391c9183dcaa618&w=996);
+    color: white;
+    font-weight: bolder;
+    width: 200px;
+    border: none;
+}
+
+.search{
+    
+    margin: 50px 50px 0px 50px;
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    
+}
+
+.srcInput{
+    background: url(https://img.freepik.com/free-photo/brown-painted-wood-textured-background_53876-102648.jpg?t=st=1710599867~exp=1710603467~hmac=19b186cb03e0e860b4a42f56dcf9d914e457adf81ddb3ef7214b583756a6958a&w=996);
+}
+
+@media screen and (max-width: 576px) {
+    
+  
+  
+  
+    .recipes{
+        max-width: 100%;
+        margin: 0px;
+    }
+   
+  
+   
+  
+    .row {
+      margin: 30px 10px;
+    }
+  
+    .recipe-img .col-md-5 {
+      width: 100%;
+    }
+  
+    .recipe-img .col-md-7 {
+      width: 100%;
+    }
+  
+    .buttons {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .deleteBtn,
+    .addBtn {
+      width: 100%;
+     
+      font-size: x-small;
+      padding: 6px;
+      
+      
+    }
+    
+    textarea,
+    input{
+        font-size: x-small;
+    }
+    
+    .card-body{
+        margin:0px;
+        padding: 5px;
+    }
+
+    label{
+        font-size: small;
+        
+    }
+
+    .chBtn,
+    .delBtn{
+        padding: 6px;
+        margin: 10px;
+        font-size: small;
+    }
+
+    .search{
+        margin: 20px 0px 0px 0px;
+        padding: 0px 10px;
+        width: 100%;
+    }
+    .search .input-group.mb-3 {
+        display: flex;
+        
+        align-items: center;
+      }
+      
+    option{
+        font-size: small;
+    }  
+
+    .form-select{
+        padding: 5px;
+        font-size: small;
+    }
+    .form-control{
+        display: flex;
+        flex-direction: column;
+    }
+    
+  }
+  

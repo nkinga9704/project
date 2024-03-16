@@ -1,0 +1,208 @@
+<!-- <div *ngFor="let recept of receptek" class="row">
+
+  <div class="card mt-5" style="width: 40rem;">
+    <img [src]="recept.kep_url" class="card-img-top" alt="{{recept.nev}}">
+    <div class="card-body">
+
+      <label for="floatingInputValue">{{oszlopok[5]}}</label>
+      <input [(ngModel)]="recept.nev" class="card-title" type="text" class="form-control" id="megnevezes">
+
+      <table class="card-text" >
+        <label for="floatingInputValue">{{ oszlopok[0] }}</label>
+        <tr *ngFor="let hozzavalo of recept.hozzavalo; let i = index">
+          <td>
+            <input [(ngModel)]="recept.hozzavalo[i].nev" placeholder="Hozzávaló neve" class="form-control">
+          </td>
+          <td>
+            <input [(ngModel)]="recept.hozzavalo[i].mennyiseg" placeholder="Mennyiség" class="form-control">
+          </td>
+          <td>
+            
+            <button  (click)="deleteIngredient(recept, i)" type="button" class="btn btn-warning">Töröl</button>
+            
+          </td>
+        </tr>
+        <label for="floatingInputValue">Új hozzávaló felvitele</label>
+        <tr *ngFor="let hozzavalo of ujRecept.hozzavalo; let i = index">
+          <td>
+            <input [(ngModel)]="hozzavalo.nev" class="form-control" placeholder="{{ oszlopok[1] }}">
+          </td>
+          <td>
+            <input [(ngModel)]="hozzavalo.mennyiseg" placeholder="{{oszlopok[2]}}" class="form-control">
+          </td>
+          <td>
+            <button *ngIf="i === ujRecept.hozzavalo.length - 1" (click)="saveNewIngredient(recept, hozzavalo)" type="button" class="btn btn-warning">Mentés</button>
+          </td>
+        </tr>
+
+      </table>
+
+      <label for="floatingInputValue">{{oszlopok[3]}}</label>
+      <input [(ngModel)]="recept.kep_url" class="card-text" type="text" class="form-control" id="kep_url">
+
+      <label for="floatingInputValue">{{oszlopok[4]}}</label>
+      <textarea [(ngModel)]="recept.leiras" class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+      
+      <button (click)="updateRecipes(recept.key, recept)" type="button" class="btn btn-warning">Módosítás</button>
+      <button (click)="deleteRecipes(recept.key)" type="button" class="btn btn-warning">Töröl</button>
+    </div>
+  </div>
+
+</div>  -->
+<div class="body">
+
+<div class="search input-group mb-3">
+  
+  <div class=" input-group mb-3" >
+    <label class="srcInput input-group-text" >Keresési szempont:</label>
+    <select class=" form-select" style="width: fit-content; border-radius: var(--bs-border-radius);" [(ngModel)]="keresesSzempont">
+      <option value="mind">Mindkét szempont</option>
+      <option value="nev">Recept neve</option>
+      <option value="hozzavalo">Hozzávalók</option>
+    </select>
+    <div class=" input-group mb-3">
+      <input [(ngModel)]="keresoSzo" type="text" class="form-control" >
+    </div>
+  </div>
+  
+
+  <div class="input-group mb-3" >
+    <label class="srcInput input-group-text">Szűrés kategóriára: </label>
+    <select class=" form-select" [(ngModel)]="selectedCategory" (change)="getRecipesByCategory(selectedCategory)">
+      <option *ngFor="let kategoria of kategoriak" [value]="kategoria">{{kategoria}}</option>   
+    </select>
+  </div>
+
+</div>
+
+
+
+
+
+
+<!-- <div *ngFor="let recept of receptek | filter:keresoSzo:keresesSzempont">
+  <div class="recipes card mb-3 mt-3" >
+    <div class="recipes-img row g-0">
+      <div class="col-md-4 d-flex justify-content-center align-items-center">
+        <img [src]="recept.kep_url" class="img-fluid" alt="{{recept.nev}}">
+      </div>
+      <div class="col-md-8">
+        <div class="card-body">
+          <label for="floatingInputValue">{{oszlopok[5]}}</label>
+          <input [(ngModel)]="recept.nev" class="card-title" type="text" class="form-control" id="megnevezes">
+
+          <table class="card-text" >
+            <label for="floatingInputValue">{{ oszlopok[0] }}</label>
+            <tr *ngFor="let hozzavalo of recept.hozzavalo; let i = index">
+              <td>
+                <input [(ngModel)]="recept.hozzavalo[i].nev" placeholder="Hozzávaló neve" class="form-control">
+              </td>
+              <td>
+                <input [(ngModel)]="recept.hozzavalo[i].mennyiseg" placeholder="Mennyiség" class="form-control">
+              </td>
+              <td>
+                
+                <button  (click)="deleteIngredient(recept, i)" type="button" class="btn btn-warning">Töröl</button>
+                
+              </td>
+            </tr>
+            <label for="floatingInputValue">Új hozzávaló felvitele</label>
+            <tr *ngFor="let hozzavalo of ujRecept.hozzavalo; let i = index">
+              <td>
+                <input [(ngModel)]="hozzavalo.nev" class="form-control" placeholder="{{ oszlopok[1] }}">
+              </td>
+              <td>
+                <input [(ngModel)]="hozzavalo.mennyiseg" placeholder="{{oszlopok[2]}}" class="form-control">
+              </td>
+              <td>
+                <button *ngIf="i === ujRecept.hozzavalo.length - 1" (click)="saveNewIngredient(recept, hozzavalo)" type="button" class="btn btn-warning">Mentés</button>
+              </td>
+            </tr>
+
+          </table>
+
+          <label for="floatingInputValue">{{oszlopok[3]}}</label>
+          <input [(ngModel)]="recept.kep_url" class="card-text" type="text" class="form-control" id="kep_url">
+
+          <label for="floatingInputValue">{{oszlopok[4]}}</label>
+          <textarea [(ngModel)]="recept.leiras" class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+          
+          <button (click)="updateRecipes(recept.key, recept)" type="button" class="btn btn-warning">Módosítás</button>
+          <button (click)="deleteRecipes(recept.key)" type="button" class="btn btn-warning">Töröl</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>  -->
+
+
+<div class="row">
+  <div class="col-md-12" *ngFor="let recept of receptek | filter:keresoSzo:keresesSzempont">
+    <div class="recipes card mb-3 mt-3">
+      <div class="recipe-img row g-0">
+        <div class="col-md-5">
+          <img [src]="recept.kep_url" class="img-fluid" alt="{{recept.nev}}" style="width: 100%;">
+        </div>
+        <div class="col-md-7">
+          <div class="card-body">
+            <label for="floatingInputValue">{{oszlopok[5]}}</label>
+            <input [(ngModel)]="recept.nev" class="card-title form-control" type="text" id="megnevezes">
+
+            <table>
+              <label for="floatingInputValue">{{ oszlopok[0] }}</label>
+              <tr *ngFor="let hozzavalo of recept.hozzavalo; let i = index">
+                <td>
+                  <input [(ngModel)]="recept.hozzavalo[i].nev" placeholder="Hozzávaló neve" class="form-control">
+                </td>
+                <td>
+                  <input [(ngModel)]="recept.hozzavalo[i].mennyiseg" placeholder="Mennyiség" class="form-control">
+                </td>
+                <td>
+                  <button (click)="deleteIngredient(recept, i)" type="button" class="deleteBtn btn btn-warning">Törlés</button>
+                </td>
+              </tr>
+              <tr>
+                <td colspan="3"> <label id="label" for="floatingInputValue">Új hozzávaló felvitele</label></td>
+              </tr>
+             
+              <tr *ngFor="let hozzavalo of ujRecept.hozzavalo; let i = index">
+                <td>
+                  <input [(ngModel)]="hozzavalo.nev" class="form-control" placeholder="{{ oszlopok[1] }}">
+                </td>
+                <td>
+                  <input [(ngModel)]="hozzavalo.mennyiseg" placeholder="{{oszlopok[2]}}" class="form-control">
+                </td>
+                <td>
+                  <button *ngIf="i === ujRecept.hozzavalo.length - 1" (click)="saveNewIngredient(recept, hozzavalo)" type="button" class="addBtn btn btn-warning">Hozzáadás</button>
+                </td>
+              </tr>
+            </table>
+
+            <label for="floatingInputValue">{{oszlopok[3]}}</label>
+            <input [(ngModel)]="recept.kep_url" class="card-text form-control" type="text" id="kep_url">
+
+            <label for="floatingInputValue">{{oszlopok[4]}}</label>
+            <textarea [(ngModel)]="recept.leiras" class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+
+
+            <div class="buttons">
+            <button (click)="updateRecipes(recept.key, recept)" type="button" class="chBtn btn btn-warning">Módosítások mentése</button>
+            <button (click)="deleteRecipes(recept.key)" type="button" class="delBtn btn btn-warning">Recept törlése</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+</div>
+
+
+  

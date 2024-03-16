@@ -1,0 +1,22 @@
+<div class="card" >
+    
+    <div class="card-body">
+      <h5 class="card-title">Köszönjük a regisztrációt!</h5>
+      <p class="card-text">Küldjük a visszaigazolást e-mailben.</p>
+      <p class="card-text">Kérjük erősítse meg e-mail címét.</p>
+      
+
+      <div class="form-floating mb-3">
+        <input disabled="true" [(ngModel)]="email" type="email" class="form-control" id="floatingPassword" placeholder="Password">
+        <label for="floatingPassword">E-mail cím</label>
+      </div>
+
+      <button (click)="sendVerificationEmail()" type="button" class="btn btn-primary mb-3">E-mail újraküldése</button>
+
+      <div class="form-floating mb-3">
+        <div><p>Visszamennél?</p></div>
+        <button routerLink="/signin" type="button" class="btn btn-primary mb-3">Vissza a bejelentkezéshez</button>
+      </div>
+
+    </div>
+  </div>
